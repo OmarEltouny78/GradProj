@@ -1,0 +1,79 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Levels/Level.tres" type="TileSet" id=1]
+[ext_resource path="res://Actons/Flag.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Actons/Jumper.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Actons/Jumper.gd" type="Script" id=6]
+[ext_resource path="res://Levels/Level14.gd" type="Script" id=7]
+[ext_resource path="res://Player/GravityPlayer.gd" type="Script" id=8]
+[ext_resource path="res://Actons/Background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Actons/TimeCounter.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Music/MiddleMusic.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/Shaker.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=13]
+
+[node name="Level14" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Sprite" parent="." instance=ExtResource( 9 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 43, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, 47, 0, 0, 48, 0, 0, 49, 0, 0, 50, 0, 0, 51, 0, 0, 52, 0, 0, 53, 0, 0, 54, 0, 0, 55, 0, 0, 56, 0, 0, 57, 0, 0, 58, 0, 0, 59, 0, 0, 60, 0, 0, 61, 0, 0, 62, 0, 0, 63, 0, 0, 64, 0, 0, 131071, 0, 0, 65600, 0, 0, 196607, 0, 0, 131136, 0, 0, 262143, 0, 0, 196672, 0, 0, 327679, 0, 0, 262208, 0, 0, 393215, 0, 0, 327744, 0, 0, 458751, 0, 0, 393280, 0, 0, 524287, 0, 0, 458816, 0, 0, 589823, 0, 0, 524352, 0, 0, 655359, 0, 0, 589888, 0, 0, 720895, 0, 0, 655424, 0, 0, 786431, 0, 0, 720960, 0, 0, 851967, 0, 0, 786496, 0, 0, 917503, 0, 0, 852032, 0, 0, 983039, 0, 0, 917568, 0, 0, 1048575, 0, 0, 983104, 0, 0, 1114111, 0, 0, 1048640, 0, 0, 1179647, 0, 0, 1114176, 0, 0, 1245183, 0, 0, 1179712, 0, 0, 1310719, 0, 0, 1245248, 0, 0, 1376255, 0, 0, 1310784, 0, 0, 1441791, 0, 0, 1376320, 0, 0, 1507327, 0, 0, 1441856, 0, 0, 1572863, 0, 0, 1507392, 0, 0, 1638399, 0, 0, 1572928, 0, 0, 1703935, 0, 0, 1638464, 0, 0, 1769471, 0, 0, 1704000, 0, 0, 1835007, 0, 0, 1769536, 0, 0, 1900543, 0, 0, 1835072, 0, 0, 1966079, 0, 0, 1900608, 0, 0, 2031615, 0, 0, 1966144, 0, 0, 2097151, 0, 0, 2031680, 0, 0, 2162687, 0, 0, 2097216, 0, 0, 2228223, 0, 0, 2162752, 0, 0, 2293759, 0, 0, 2228288, 0, 0, 2359295, 0, 0, 2293824, 0, 0, 2424831, 0, 0, 2359360, 0, 0, 2490367, 0, 0, 2424832, 0, 0, 2424833, 0, 0, 2424834, 0, 0, 2424835, 0, 0, 2424836, 0, 0, 2424837, 0, 0, 2424838, 0, 0, 2424839, 0, 0, 2424840, 0, 0, 2424841, 0, 0, 2424842, 0, 0, 2424843, 0, 0, 2424844, 0, 0, 2424845, 0, 0, 2424846, 0, 0, 2424847, 0, 0, 2424848, 0, 0, 2424849, 0, 0, 2424850, 0, 0, 2424851, 0, 0, 2424852, 0, 0, 2424853, 0, 0, 2424854, 0, 0, 2424855, 0, 0, 2424856, 0, 0, 2424857, 0, 0, 2424858, 0, 0, 2424859, 0, 0, 2424860, 0, 0, 2424861, 0, 0, 2424862, 0, 0, 2424863, 0, 0, 2424864, 0, 0, 2424865, 0, 0, 2424866, 0, 0, 2424867, 0, 0, 2424868, 0, 0, 2424869, 0, 0, 2424870, 0, 0, 2424871, 0, 0, 2424872, 0, 0, 2424873, 0, 0, 2424874, 0, 0, 2424875, 0, 0, 2424876, 0, 0, 2424877, 0, 0, 2424878, 0, 0, 2424879, 0, 0, 2424880, 0, 0, 2424881, 0, 0, 2424882, 0, 0, 2424883, 0, 0, 2424884, 0, 0, 2424885, 0, 0, 2424886, 0, 0, 2424887, 0, 0, 2424888, 0, 0, 2424889, 0, 0, 2424890, 0, 0, 2424891, 0, 0, 2424892, 0, 0, 2424893, 0, 0, 2424894, 0, 0, 2424895, 0, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 656, 315 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 322, 324 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7, 579 )
+script = ExtResource( 8 )
+speed = 100
+
+[node name="Flag" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1016, 584 )
+
+[node name="Jumper" parent="." instance=ExtResource( 3 )]
+position = Vector2( 208, 587 )
+script = ExtResource( 6 )
+
+[node name="Jumper2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 388, 587 )
+script = ExtResource( 6 )
+
+[node name="Jumper3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 566, 587 )
+script = ExtResource( 6 )
+
+[node name="Jumper4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 739, 587 )
+script = ExtResource( 6 )
+
+[node name="Label" parent="." instance=ExtResource( 10 )]
+margin_left = 0.0
+margin_top = 16.0
+margin_right = 40.0
+margin_bottom = 36.0
+
+[node name="MiddleMusic" parent="." instance=ExtResource( 11 )]
+
+[node name="Camera2D" parent="." instance=ExtResource( 12 )]
+position = Vector2( 512, 296 )
+
+[node name="GUI" parent="." instance=ExtResource( 13 )]
+
+[connection signal="body_entered" from="Flag" to="." method="_on_Flag_body_entered"]
+[connection signal="body_entered" from="Jumper" to="Jumper" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper" to="Jumper" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper2" to="Jumper2" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper2" to="Jumper2" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper3" to="Jumper3" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper3" to="Jumper3" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper4" to="Jumper4" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper4" to="Jumper4" method="_on_Jumper_body_exited"]

@@ -1,0 +1,99 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Levels/Level.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/ReversePlayer.gd" type="Script" id=3]
+[ext_resource path="res://Actons/Jumper.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Actons/Jumper.gd" type="Script" id=5]
+[ext_resource path="res://Actons/Spike.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Actons/Spike.gd" type="Script" id=7]
+[ext_resource path="res://Actons/Flag.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/Level19.gd" type="Script" id=9]
+[ext_resource path="res://Actons/Background2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Actons/TimeCounter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Music/MiddleMusic.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/Shaker.tscn" type="PackedScene" id=13]
+[ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=14]
+
+[node name="Level19" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Sprite" parent="." instance=ExtResource( 10 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, -65509, 0, 0, -65508, 0, 0, -65507, 0, 0, -65506, 0, 0, -65505, 0, 0, -65504, 0, 0, -65503, 0, 0, -65502, 0, 0, -65501, 0, 0, -65500, 0, 0, -65499, 0, 0, -65498, 0, 0, -65497, 0, 0, -65496, 0, 0, -65495, 0, 0, -65494, 0, 0, -65493, 0, 0, -65492, 0, 0, -65491, 0, 0, -65490, 0, 0, -65489, 0, 0, -65488, 0, 0, -65487, 0, 0, -65486, 0, 0, -65485, 0, 0, -65484, 0, 0, -65483, 0, 0, -65482, 0, 0, -65481, 0, 0, -65480, 0, 0, -65479, 0, 0, -65478, 0, 0, -65477, 0, 0, -65476, 0, 0, -65475, 0, 0, -65474, 0, 0, -65473, 0, 0, 65535, 0, 0, 64, 0, 0, 131071, 0, 0, 65600, 0, 0, 196607, 0, 0, 131136, 0, 0, 262143, 0, 0, 196672, 0, 0, 327679, 0, 0, 262208, 0, 0, 393215, 0, 0, 327744, 0, 0, 458751, 0, 0, 393280, 0, 0, 524287, 0, 0, 458816, 0, 0, 589823, 0, 0, 524352, 0, 0, 655359, 0, 0, 589888, 0, 0, 720895, 0, 0, 655424, 0, 0, 786431, 0, 0, 720960, 0, 0, 851967, 0, 0, 786496, 0, 0, 917503, 0, 0, 852032, 0, 0, 983039, 0, 0, 917568, 0, 0, 1048575, 0, 0, 983104, 0, 0, 1114111, 0, 0, 1048640, 0, 0, 1179647, 0, 0, 1114176, 0, 0, 1245183, 0, 0, 1179712, 0, 0, 1310719, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1245220, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245248, 0, 0, 1376255, 0, 0, 1310745, 0, 0, 1310746, 0, 0, 1310747, 0, 0, 1310748, 0, 0, 1310749, 0, 0, 1310750, 0, 0, 1310751, 0, 0, 1310763, 0, 0, 1310764, 0, 0, 1310765, 0, 0, 1310766, 0, 0, 1310767, 0, 0, 1310784, 0, 0, 1441791, 0, 0, 1376320, 0, 0, 1507327, 0, 0, 1441856, 0, 0, 1572863, 0, 0, 1507328, 0, 0, 1507329, 0, 0, 1507330, 0, 0, 1507331, 0, 0, 1507332, 0, 0, 1507333, 0, 0, 1507334, 0, 0, 1507335, 0, 0, 1507336, 0, 0, 1507337, 0, 0, 1507338, 0, 0, 1507339, 0, 0, 1507340, 0, 0, 1507341, 0, 0, 1507342, 0, 0, 1507343, 0, 0, 1507344, 0, 0, 1507345, 0, 0, 1507346, 0, 0, 1507347, 0, 0, 1507348, 0, 0, 1507349, 0, 0, 1507350, 0, 0, 1507351, 0, 0, 1507352, 0, 0, 1507353, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1507356, 0, 0, 1507357, 0, 0, 1507358, 0, 0, 1507359, 0, 0, 1507360, 0, 0, 1507361, 0, 0, 1507362, 0, 0, 1507363, 0, 0, 1507364, 0, 0, 1507365, 0, 0, 1507366, 0, 0, 1507367, 0, 0, 1507368, 0, 0, 1507369, 0, 0, 1507370, 0, 0, 1507371, 0, 0, 1507372, 0, 0, 1507373, 0, 0, 1507374, 0, 0, 1507375, 0, 0, 1507376, 0, 0, 1507377, 0, 0, 1507378, 0, 0, 1507379, 0, 0, 1507380, 0, 0, 1507381, 0, 0, 1507382, 0, 0, 1507383, 0, 0, 1507384, 0, 0, 1507385, 0, 0, 1507386, 0, 0, 1507387, 0, 0, 1507392, 0, 0, 1638399, 0, 0, 1572928, 0, 0, 1703935, 0, 0, 1638464, 0, 0, 1769471, 0, 0, 1704000, 0, 0, 1835007, 0, 0, 1769536, 0, 0, 1900543, 0, 0, 1835072, 0, 0, 1966079, 0, 0, 1900603, 0, 0, 1900604, 0, 0, 1900605, 0, 0, 1900606, 0, 0, 1900607, 0, 0, 1900608, 0, 0, 2031615, 0, 0, 1966144, 0, 0, 2097151, 0, 0, 2031680, 0, 0, 2162687, 0, 0, 2097201, 0, 0, 2097202, 0, 0, 2097203, 0, 0, 2097204, 0, 0, 2097205, 0, 0, 2097206, 0, 0, 2097207, 0, 0, 2097208, 0, 0, 2097209, 0, 0, 2097216, 0, 0, 2228223, 0, 0, 2162752, 0, 0, 2293759, 0, 0, 2228263, 0, 0, 2228264, 0, 0, 2228265, 0, 0, 2228266, 0, 0, 2228267, 0, 0, 2228268, 0, 0, 2228269, 0, 0, 2228270, 0, 0, 2228288, 0, 0, 2359295, 0, 0, 2293824, 0, 0, 2424831, 0, 0, 2359360, 0, 0, 2424832, 0, 0, 2424833, 0, 0, 2424834, 0, 0, 2424835, 0, 0, 2424836, 0, 0, 2424837, 0, 0, 2424838, 0, 0, 2424839, 0, 0, 2424840, 0, 0, 2424841, 0, 0, 2424842, 0, 0, 2424843, 0, 0, 2424844, 0, 0, 2424845, 0, 0, 2424846, 0, 0, 2424847, 0, 0, 2424848, 0, 0, 2424849, 0, 0, 2424850, 0, 0, 2424851, 0, 0, 2424852, 0, 0, 2424853, 0, 0, 2424854, 0, 0, 2424855, 0, 0, 2424856, 0, 0, 2424857, 0, 0, 2424858, 0, 0, 2424859, 0, 0, 2424860, 0, 0, 2424861, 0, 0, 2424862, 0, 0, 2424863, 0, 0, 2424864, 0, 0, 2424865, 0, 0, 2424866, 0, 0, 2424867, 0, 0, 2424868, 0, 0, 2424869, 0, 0, 2424870, 0, 0, 2424871, 0, 0, 2424872, 0, 0, 2424873, 0, 0, 2424874, 0, 0, 2424875, 0, 0, 2424876, 0, 0, 2424877, 0, 0, 2424878, 0, 0, 2424879, 0, 0, 2424880, 0, 0, 2424881, 0, 0, 2424882, 0, 0, 2424883, 0, 0, 2424884, 0, 0, 2424885, 0, 0, 2424886, 0, 0, 2424887, 0, 0, 2424888, 0, 0, 2424889, 0, 0, 2424890, 0, 0, 2424891, 0, 0, 2424892, 0, 0, 2424893, 0, 0, 2424894, 0, 0, 2424895, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12, 580 )
+script = ExtResource( 3 )
+
+[node name="Jumper" parent="." instance=ExtResource( 4 )]
+position = Vector2( 601, 587 )
+script = ExtResource( 5 )
+
+[node name="Jumper2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 739, 539 )
+script = ExtResource( 5 )
+
+[node name="Jumper3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 917, 507 )
+script = ExtResource( 5 )
+
+[node name="Jumper4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 988, 459 )
+script = ExtResource( 5 )
+
+[node name="Jumper5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 800, 363 )
+script = ExtResource( 5 )
+
+[node name="Jumper6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 701, 315 )
+script = ExtResource( 5 )
+
+[node name="Jumper7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 363, 363 )
+script = ExtResource( 5 )
+
+[node name="Spike" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1016, 456 )
+script = ExtResource( 7 )
+
+[node name="Spike2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 561, 296 )
+script = ExtResource( 7 )
+
+[node name="Flag" parent="." instance=ExtResource( 8 )]
+position = Vector2( 455, 312 )
+
+[node name="Label" parent="." instance=ExtResource( 11 )]
+margin_top = 1.0
+margin_bottom = 21.0
+
+[node name="MiddleMusic" parent="." instance=ExtResource( 12 )]
+
+[node name="Camera2D" parent="." instance=ExtResource( 13 )]
+position = Vector2( 516, 296 )
+
+[node name="GUI" parent="." instance=ExtResource( 14 )]
+
+[connection signal="body_entered" from="Jumper" to="Jumper" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper" to="Jumper" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper2" to="Jumper2" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper2" to="Jumper2" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper3" to="Jumper3" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper3" to="Jumper3" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper4" to="Jumper4" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper4" to="Jumper4" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper5" to="Jumper5" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper5" to="Jumper5" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper6" to="Jumper6" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper6" to="Jumper6" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Jumper7" to="Jumper7" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="Jumper7" to="Jumper7" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="Spike" to="Spike" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spike2" to="Spike2" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Flag" to="." method="_on_Flag_body_entered"]

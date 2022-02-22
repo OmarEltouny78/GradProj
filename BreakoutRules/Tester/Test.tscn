@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tester/test.gd" type="Script" id=3]
+
+[node name="Test" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 1.99031, 0.998255 )
+scale = Vector2( 0.998062, 0.998255 )
+invert_enable = true
+polygon = PoolVector2Array( -1.99417, 0.0017482, 1023, -1, 1027, 572, 1, 571 )
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Polygon2D"]

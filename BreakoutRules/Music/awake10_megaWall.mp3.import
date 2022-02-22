@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/awake10_megaWall.mp3-af1c24a3b7615e81e6c12e44dfdd0264.mp3str"
+
+[deps]
+
+source_file="res://Music/awake10_megaWall.mp3"
+dest_files=[ "res://.import/awake10_megaWall.mp3-af1c24a3b7615e81e6c12e44dfdd0264.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,289 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Levels/Level.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Actons/Jumper.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actons/Spike.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Actons/Jumper.gd" type="Script" id=5]
+[ext_resource path="res://Player/SpeedyPlayer.gd" type="Script" id=6]
+[ext_resource path="res://Levels/Level27.gd" type="Script" id=7]
+[ext_resource path="res://Actons/VerSpike.gd" type="Script" id=8]
+[ext_resource path="res://Actons/pixil-frame-0 (1).png" type="Texture" id=9]
+[ext_resource path="res://Actons/Flag.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Actons/Background2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Actons/TimeCounter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://SFX/Fall.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Music/EndMusic.tscn" type="PackedScene" id=14]
+[ext_resource path="res://UI/Shaker.tscn" type="PackedScene" id=15]
+[ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 19 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Moving"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 315, 176 ), Vector2( 441, 176 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 315, 176 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Moving"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 318, 468 ), Vector2( 473, 468 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 315, 176 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Moving"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 709, 468 ), Vector2( 599, 468 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 315, 176 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Moving"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 715, 342 ), Vector2( 584, 342 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 315, 176 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 511, 45 )
+
+[node name="Level27" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Sprite" parent="." instance=ExtResource( 11 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, -65509, 0, 0, -65508, 0, 0, -65507, 0, 0, -65506, 0, 0, -65505, 0, 0, -65504, 0, 0, -65503, 0, 0, -65502, 0, 0, -65501, 0, 0, -65500, 0, 0, -65499, 0, 0, -65498, 0, 0, -65497, 0, 0, -65496, 0, 0, -65495, 0, 0, -65494, 0, 0, -65493, 0, 0, -65492, 0, 0, -65491, 0, 0, -65490, 0, 0, -65489, 0, 0, -65488, 0, 0, -65487, 0, 0, -65486, 0, 0, -65485, 0, 0, -65484, 0, 0, -65483, 0, 0, -65482, 0, 0, -65481, 0, 0, -65480, 0, 0, -65479, 0, 0, -65478, 0, 0, -65477, 0, 0, -65476, 0, 0, -65475, 0, 0, -65474, 0, 0, -65473, 0, 0, 65535, 0, 0, 64, 0, 0, 131071, 0, 0, 65600, 0, 0, 196607, 0, 0, 131136, 0, 0, 262143, 0, 0, 196672, 0, 0, 327679, 0, 0, 262208, 0, 0, 393215, 0, 0, 327744, 0, 0, 458751, 0, 0, 393280, 0, 0, 524287, 0, 0, 458816, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 524324, 0, 0, 524325, 0, 0, 524326, 0, 0, 524327, 0, 0, 524328, 0, 0, 524329, 0, 0, 524330, 0, 0, 524338, 0, 0, 524339, 0, 0, 524340, 0, 0, 524341, 0, 0, 524342, 0, 0, 524343, 0, 0, 524344, 0, 0, 524345, 0, 0, 524346, 0, 0, 524352, 0, 0, 655359, 0, 0, 589888, 0, 0, 720895, 0, 0, 655424, 0, 0, 786431, 0, 0, 720960, 0, 0, 851967, 0, 0, 786496, 0, 0, 917503, 0, 0, 852032, 0, 0, 983039, 0, 0, 917568, 0, 0, 1048575, 0, 0, 983104, 0, 0, 1114111, 0, 0, 1048640, 0, 0, 1179647, 0, 0, 1114176, 0, 0, 1245183, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1179697, 0, 0, 1179698, 0, 0, 1179699, 0, 0, 1179700, 0, 0, 1179701, 0, 0, 1179702, 0, 0, 1179703, 0, 0, 1179704, 0, 0, 1179705, 0, 0, 1179706, 0, 0, 1179707, 0, 0, 1179708, 0, 0, 1179709, 0, 0, 1179710, 0, 0, 1179711, 0, 0, 1179712, 0, 0, 1310719, 0, 0, 1245248, 0, 0, 1376255, 0, 0, 1310784, 0, 0, 1441791, 0, 0, 1376320, 0, 0, 1507327, 0, 0, 1441856, 0, 0, 1572863, 0, 0, 1507392, 0, 0, 1638399, 0, 0, 1572928, 0, 0, 1703935, 0, 0, 1638464, 0, 0, 1769471, 0, 0, 1704000, 0, 0, 1835007, 0, 0, 1769472, 0, 0, 1769473, 0, 0, 1769474, 0, 0, 1769475, 0, 0, 1769476, 0, 0, 1769477, 0, 0, 1769478, 0, 0, 1769479, 0, 0, 1769480, 0, 0, 1769481, 0, 0, 1769482, 0, 0, 1769483, 0, 0, 1769484, 0, 0, 1769485, 0, 0, 1769486, 0, 0, 1769487, 0, 0, 1769520, 0, 0, 1769521, 0, 0, 1769522, 0, 0, 1769523, 0, 0, 1769524, 0, 0, 1769525, 0, 0, 1769526, 0, 0, 1769527, 0, 0, 1769528, 0, 0, 1769529, 0, 0, 1769530, 0, 0, 1769531, 0, 0, 1769532, 0, 0, 1769533, 0, 0, 1769534, 0, 0, 1769535, 0, 0, 1769536, 0, 0 )
+
+[node name="MovingHoz" type="KinematicBody2D" parent="."]
+position = Vector2( 315, 176 )
+motion/sync_to_physics = true
+
+[node name="Sprite" type="Sprite" parent="MovingHoz"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingHoz"]
+position = Vector2( 1, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingHoz"]
+anims/Moving = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="Jumper" parent="MovingHoz" instance=ExtResource( 3 )]
+position = Vector2( 30, -25 )
+script = ExtResource( 5 )
+
+[node name="MovingHoz3" type="KinematicBody2D" parent="."]
+position = Vector2( 315, 176 )
+motion/sync_to_physics = true
+
+[node name="Sprite" type="Sprite" parent="MovingHoz3"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingHoz3"]
+position = Vector2( 0.633484, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingHoz3"]
+anims/Moving = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+
+[node name="Jumper" parent="MovingHoz3" instance=ExtResource( 3 )]
+position = Vector2( 30, -25 )
+script = ExtResource( 5 )
+
+[node name="MovingHoz4" type="KinematicBody2D" parent="."]
+position = Vector2( 315, 176 )
+motion/sync_to_physics = true
+
+[node name="Sprite" type="Sprite" parent="MovingHoz4"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingHoz4"]
+position = Vector2( 1, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingHoz4"]
+anims/Moving = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+
+[node name="Jumper" parent="MovingHoz4" instance=ExtResource( 3 )]
+position = Vector2( 30, -25 )
+script = ExtResource( 5 )
+
+[node name="MovingHoz2" type="KinematicBody2D" parent="."]
+position = Vector2( 315, 176 )
+motion/sync_to_physics = true
+
+[node name="Sprite" type="Sprite" parent="MovingHoz2"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingHoz2"]
+position = Vector2( 1, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingHoz2"]
+anims/Moving = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+
+[node name="Jumper" parent="MovingHoz2" instance=ExtResource( 3 )]
+position = Vector2( 5.99997, -25 )
+script = ExtResource( 5 )
+
+[node name="Spike" parent="MovingHoz2" instance=ExtResource( 4 )]
+position = Vector2( 52, -28 )
+script = ExtResource( 8 )
+
+[node name="Reset" type="Area2D" parent="."]
+position = Vector2( 304, 576 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reset"]
+position = Vector2( 209, -35 )
+shape = SubResource( 10 )
+
+[node name="Flag" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1016, 423 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9, 115 )
+script = ExtResource( 6 )
+
+[node name="Label" parent="." instance=ExtResource( 12 )]
+margin_left = 3.0
+margin_top = -1.0
+margin_right = 43.0
+margin_bottom = 19.0
+
+[node name="Fall" parent="." instance=ExtResource( 13 )]
+
+[node name="EndMusic" parent="." instance=ExtResource( 14 )]
+autoplay = true
+
+[node name="Camera2D" parent="." instance=ExtResource( 15 )]
+position = Vector2( 514, 296 )
+
+[node name="GUI" parent="." instance=ExtResource( 16 )]
+
+[connection signal="body_entered" from="MovingHoz/Jumper" to="MovingHoz/Jumper" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="MovingHoz/Jumper" to="MovingHoz/Jumper" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="MovingHoz3/Jumper" to="MovingHoz3/Jumper" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="MovingHoz3/Jumper" to="MovingHoz3/Jumper" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="MovingHoz4/Jumper" to="MovingHoz4/Jumper" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="MovingHoz4/Jumper" to="MovingHoz4/Jumper" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="MovingHoz2/Jumper" to="MovingHoz2/Jumper" method="_on_Jumper_body_entered"]
+[connection signal="body_exited" from="MovingHoz2/Jumper" to="MovingHoz2/Jumper" method="_on_Jumper_body_exited"]
+[connection signal="body_entered" from="MovingHoz2/Spike" to="MovingHoz2/Spike" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Reset" to="." method="_on_Reset_body_entered"]
+[connection signal="body_entered" from="Flag" to="." method="_on_Flag_body_entered"]
